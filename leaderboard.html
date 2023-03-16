@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris leaderboard</title>
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <script src="./main.js"></script>
+    <script src="./tetramino.js"></script>
+    <script src="./leaderboard.js"></script>
+    <style>
+        @font-face {
+            font-family: Minecraft;
+            src: url('./assets/Minecraft.ttf');
+        }
+        #leaderboardTable, th, td{
+            font-size: 4vh;
+            border: 1px solid black;
+            border-collapse: collapse;
+            font-family: Minecraft;
+            padding-right:5px;
+            padding-left: 5px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+        div{
+            width: 300px;
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            transform: translate(-50%, 0%);
+            text-align: center;
+            font-family: Minecraft;
+        }
+        .playAgainButton{
+            font-family: Minecraft;
+            padding: 10px 10px;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body onload="displayLeaderboard()">
+    <div>
+        <h1>ИГРА ОКОНЧЕНА</h1>
+        <button class="playAgainButton" onclick='window.location.href = "./main.html"' >Играть снова</button>
+        <button class="playAgainButton" onclick='window.location.href = "./index.html"' >Играть за нового пользователя</button>
+        <h2>Таблица лидеров:</h2>
+        <table id="leaderboardTable"></table>
+    </div>
+</body>
+</html>

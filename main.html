@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <script src="./main.js"></script>
+    <script src="./tetramino.js"></script>
+    <script src="./leaderboard.js"></script>
+    <style>
+        @font-face {
+            font-family: Minecraft;
+            src: url('./assets/Minecraft.ttf');
+        }
+        *{
+            font-size: 28px;
+            font-family: Minecraft;
+        }
+        #left{
+            margin-left: 10vw;
+            float: left;
+        }
+        #left #startbutton{
+            display: block;
+        }
+        #left #startbutton[hidden]{
+            display: none;
+        }
+        #right{
+            float: right;
+            margin-right: 10vw;
+        }
+    </style>
+</head>
+<body onload="draw()">
+    <div id="left">
+        <canvas id="canvasid" width="310" height="610"></canvas>
+        <button onclick="gameStart()" id="startbutton"> Начать игру </button>
+        <p>Счёт: <span id="score"></span></p>
+    </div>
+    
+    <div id="right">
+        <p>Следующая фигура:</p>
+        <canvas id="nextFigureCanvas" width="130" height="130"></canvas>
+    </div>
+    
+</body>
+</html>

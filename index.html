@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <script src="./main.js"></script>
+    <style>
+        @font-face {
+            font-family: Minecraft;
+            src: url('./assets/Minecraft.ttf');
+        }
+        div {
+            font-family: Minecraft;
+            font-size: 32px;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        form *{
+            font-family: Minecraft;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="header">Игра TETRIS</h1>
+        <form action="./main.html" id="form" onsubmit="storeUsername(this)">
+            <label>
+                Введите имя:<br>
+                <input placeholder="Имя пользователя" name = "username" required><br>
+            </label>
+            <input type="submit" value="НАЧАТЬ" autocomplete="off">
+        </form>
+    </div>
+</body>
+</html>
